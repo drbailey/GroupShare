@@ -1,0 +1,28 @@
+# These are examples of displaying variables, %r displays raw data, %s/d are for displaying users.
+
+x = "There are %d types 0f people." % 10
+binary = "binary"
+do_not = "don't"
+y = "Those who know %s and those who %s." % (binary, do_not	)
+
+print x
+print y
+
+# Printing previously assigned text strings 
+
+print "I said: %r." % x
+print "I also said '%s'." % y
+
+# Assign statement to False then output statement in text string.
+
+hilarious = False
+joke_evaluation = "Isn't that joke so funny?! %r"
+
+print joke_evaluation % hilarious
+
+# Output of assigned string variables with + symbol to combine
+
+w = "This is the left side of..."
+e = "a string with a right side."
+
+print w + e
