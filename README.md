@@ -4,10 +4,12 @@ GroupShare
 Learn python with friends
 Lets do some python!
 Some ideas of what to work on are...
+
 1. Project Euler
 2. Simple games
 3. Exercises and examples
 4. Anything you want other's feedback on
+
 Feel free to add or change anything here.
 	
 	
@@ -53,6 +55,7 @@ Short win32py manual that is a bit out of date.
 
 Standard basics.
 * https://help.github.com/articles/markdown-basics
+
 Git flavor basics.
 * https://github.github.com/github-flavored-markdown/
 
