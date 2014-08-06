@@ -18,6 +18,9 @@ Feel free to add or change anything here.
 Anyone should feel free to include resources that they feel were particularly helpful.
 
 ### Beginer
+**Blog Outlining Coding Resource Websites**
+* http://fieldguide.gizmodo.com/6-inspiring-websites-that-teach-you-to-code-1616821169/+barrett
+
 **Great Free Book for Beginners**
 * http://www.greenteapress.com/thinkpython/thinkpython.pdf
 
