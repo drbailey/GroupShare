@@ -1,0 +1,47 @@
+
+
+EXERCISE 17: MORE FILES
+The basic idea here is copy one file's contents to another. The author uses some questionable notation, but he opens two files, checks if the write file exists, then lets the user choose whether or not to proceed, he then closes the files. 
+ - 17.py is exactly what the exercise has written.
+ - 17(commented).py has more details.
+ - 17 - drill 1.py is drill one.
+ - 17 - drill 1(commented).py includes more details.
+ - 17 - drill 2.py is drill two.
+ - 17 - drill 2(commented).py includes more details.
+Read through the comments in the commented files to see what I did and what I was thinking.
+
+Some notes finish with:
+ - Generally scripts that I run are not run through the command line so argv is not very useful. (Use os.getcwd() to get directory).
+ - I stopped after drill two since they seemed less relevant.
+
+
+how to run from windows:
+
+GENERAL EXAMPLE:
+
+in cmd.exe...
+C:\Users\Me>cd "path\to\directory\with\exercise17\"
+path\to\directory\with\exercise17>python 17.py from_file_name.txt to_file_name.txt
+Copying from from_file_name.txt to to_file_name.txt
+The input file is xx bytes long
+Does the output file exist? False
+Read, hit RETURN to continue, CTRL-C to abort.
+
+Alrighty, all done.
+
+path\to\directory\with\exercise17>
+
+
+SPECIFIC EXAMPLE:
+
+in cmd.exe...
+C:\Users\dbai00o>cd "path\to\directory\with\exercise17\"
+C:\Users\dbai00o\Desktop\New folder\LPTHW>python 17.py foobar.txt ouput.txt
+Copying from foobar.txt to ouput.txt
+The input file is 24 bytes long
+Does the output file exist? False
+Read, hit RETURN to continue, CTRL-C to abort.
+
+Alrighty, all done.
+
+C:\Users\dbai00o\Desktop\New folder\LPTHW>
