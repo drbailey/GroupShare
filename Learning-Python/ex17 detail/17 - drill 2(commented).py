@@ -29,6 +29,11 @@ import os, sys
 # time, but keep in mind the standard is 120 characters per line and it is
 # often considered poor practice to exceed this limit. (due to standard window
 # size i think?
+
+# also note that if you don't assign open(...) to a variable on windows and
+# cython it is closed automatically at the end of the statement (it may
+# elsewhere as well, but i don't know for sure). you should still use with
+# however.
 if not os.path.exists(sys.argv[2]): open(sys.argv[2], 'w').write(open(sys.argv[1], 'r').read())
 
 # poor exercise since it teaches new programmers bad habits!
