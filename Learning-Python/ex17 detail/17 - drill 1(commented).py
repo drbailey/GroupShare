@@ -1,3 +1,12 @@
+### author and docs ###
+__author__ = 'drew bailey'
+"""
+exercise 17 from learning python the hard way:
+http://learnpythonthehardway.org/book/ex17.html
+
+drill one: commented
+"""
+
 ### imports ###
 from sys import argv
 from os.path import exists

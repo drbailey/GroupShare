@@ -1,3 +1,9 @@
+__author__ = 'drew bailey'
+"""
+exercise 17 from learning python the hard way:
+http://learnpythonthehardway.org/book/ex17.html
+"""
+
 from sys import argv
 from os.path import exists
 

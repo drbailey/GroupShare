@@ -1,3 +1,13 @@
+### author and docs ###
+__author__ = 'drew bailey'
+"""
+exercise 17 from learning python the hard way:
+http://learnpythonthehardway.org/book/ex17.html
+
+drill two: commented
+docs and author excluded in non-commented file to make the script short...
+"""
+
 ### imports ###
 # single line imports are generally frowned on, they are harder to read. 
 # that being said i sometimes include related packages on one line.
