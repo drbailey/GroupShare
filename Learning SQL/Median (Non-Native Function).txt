@@ -1,0 +1,10 @@
+SELECT
+  part_col
+  ,CASE
+     WHEN      COUNT(*) OVER (PARTITION BY part_col) MOD 2 = 1 THEN data_col
+     ELSE AVG(data_col) OVER (PARTITION BY part_col ORDER BY data_col ROWS 1 PRECEDING)
+   END
+FROM tab
+QUALIFY
+  ROW_NUMBER() OVER (PARTITION BY part_col ORDER BY data_col)
+    = COUNT(*) OVER (PARTITION BY part_col) / 2 + 1;

@@ -1,0 +1,2 @@
+SELECT ColumnName, TableName, DatabaseName
+FROM DBC.Columns
