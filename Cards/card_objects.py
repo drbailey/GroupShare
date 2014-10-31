@@ -20,7 +20,7 @@ and "Cards" cause "Events".
 
 
 ### ROOT EVENT OBJECT ###
-class Event(object):
+class Effect(object):
     def __init__(self):
         pass
 
@@ -89,7 +89,7 @@ class Card(object):
 
 ### CARD TYPES ###
 class Land(Card):
-    def __init__(self, name, color):
+    def __init__(self, name, color=None):
         """
         :param name:
         :param color: 
@@ -151,6 +151,26 @@ class Player(object):
     def draw(self):
         self.hand.append(self.libary.draw(n=7))
 
+## COLOR OBJECTS ##
+class Color(object):
+    def __init__(self, name=None):
+        self.name = name
+
+# instantiate primary colors
+black = Color(name='Black')
+white = Color(name='White')
+green = Color(name='Green')
+red = Color(name='Red')
+blue = Color(name='Blue')
+colorless = Color(name='Colorless')
+
+
+## MANA OBJECTS ##
+class Mana(object):
+    ''' '''
+    def __init__(self, color=colorless):
+        self.color = color
+
 
 ### THE BOARD ###
 class World(object):
@@ -176,3 +196,7 @@ each event is resolved in priority/stack order
 
 
 '''
+
+# lets make some cards
+swamp = Land(name='Swamp', generator='Black')
+test_1 = Creature(name='Imp', color='Black', cost=[], power, toughness, tap, effect):
