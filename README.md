@@ -17,7 +17,7 @@ Feel free to add or change anything here.
 
 Anyone should feel free to include resources that they feel were particularly helpful.
 
-### Beginer
+### Beginner
 **Blog Outlining Coding Resource Websites**
 * http://fieldguide.gizmodo.com/6-inspiring-websites-that-teach-you-to-code-1616821169/+barrett
 
