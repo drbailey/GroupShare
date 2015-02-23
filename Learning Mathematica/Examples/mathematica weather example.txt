@@ -1,0 +1,62 @@
+Clear["Global`*"]
+
+StartDate = {2014, 3, 2}
+EndDate = {2014, 6, 19}
+Markets = {
+  {"longview", "wa"}, {"kelso", "wa"}, {"woodland", 
+   "wa"}, {"battle ground", "wa"}, {"vancouver", "wa"}, {"camas", 
+   "wa"}, {"washougal", "wa"}, {"walla walla", 
+   "wa"}, {"milton freewater", "or"}, {"hermiston", 
+   "or"}, {"la grande", "or"}, {"baker city", "or"}, {"enterprise", 
+   "or"}, {"hood river", "or"}, {"sandy", "or"}, {"troutdale", 
+   "or"}, {"gresham", "or"}, {"clackamas", "or"}, {"portland", 
+   "or"}, {"milwaukie", "or"}, {"oregon city", "or"}, {"lake oswego", 
+   "or"}, {"west linn", "or"}, {"gladstone", "or"}, {"seaside", 
+   "or"}, {"astoria", "or"}, {"clatskanie", "or"}, {"forest grove", 
+   "or"}, {"st. helens", "or"}, {"wilsonville", "or"}, {"newberg", 
+   "or"}, {"sherwood", "or"}, {"newport", "or"}, {"lincoln city", 
+   "or"}, {"tigard", "or"}, {"tillamook", "or"}, {"beaverton", 
+   "or"}, {"aloha", "or"}, {"hillsboro", "or"}, {"sweet home", 
+   "or"}, {"corvallis", "or"}, {"lebanon", "or"}, {"canby", 
+   "or"}, {"woodburn", "or"}, {"molalla", "or"}, {"silverton", 
+   "or"}, {"keizer", "or"}, {"salem", "or"}, {"stayton", 
+   "or"}, {"dallas", "or"}, {"albany", "or"}, {"florence", 
+   "or"}, {"reedsport", "or"}, {"cottage grove", 
+   "or"}, {"junction city", "or"}, {"eugene", "or"}, {"springfield", 
+   "or"}, {"madras", "or"}, {"redmond", "or"}, {"bend", 
+   "or"}, {"lakeview", "or"}, {"klamath falls", "or"}, {"ashland", 
+   "or"}, {"medford", "or"}, {"central point", "or"}, {"grants pass", 
+   "or"}, {"roseburg", "or"}, {"burns", "or"}, {"north bend", 
+   "or"}, {"coos bay", "or"}, {"coquille", "or"}
+  }
+Metrics = {
+  "MaxTemperature",
+  "MaxWindSpeed",
+  "MeanDewPoint",
+  "MeanHumidity",
+  "MeanPressure",
+  "MeanStationPressure",
+  "MeanTemperature",
+  "MeanVisibility",
+  "MeanWindChill",
+  "MeanWindSpeed",
+  "MinTemperature",
+  "TotalPrecipitation",
+  "WindGusts"
+  }
+  
+(*r1[[1]]==First[r1] is True*)
+Prepender[value1_, value2_, 
+  nest_] := (Cases[nest, {a_, b_} :> {value1, value2, a, b}])
+MarketMetric[market_, 
+  metric_] := (Prepender[market, metric, 
+   WeatherData[market, metric, {StartDate, EndDate, "Day"}]])
+Prepender::usage = "Prepender[value, nest] returns the nested list \
+'nest' with 'value' prepended to each element."
+MarketMetric::usage = "MarketMetric[location, property, daterange] \
+returns daily aggregated weather data from WeatherData function of \
+form {location,{year,month,day},property_value},{...}}."
+
+
+results = Flatten[MarketMetric[#1, #2] & @@@ Tuples[{Markets, Metrics}], 1]
+ 
