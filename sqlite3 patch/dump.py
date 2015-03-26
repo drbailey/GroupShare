@@ -2,7 +2,6 @@
     dump.py *** PATCHED ***
     place this file into "C:\Python27\lib\sqlite3\dump.py"
     *** MODIFIED WITH PATCH: http://bugs.python.org/file24429/sqlite3dump.patch ***
-    *** MODIFIED FURTHER BY drew bailey 2015-03-26 ***
 """
 
 # Mimic the sqlite3 console shell's .dump command
