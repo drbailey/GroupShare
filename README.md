@@ -74,6 +74,9 @@ Can download as PDF.
 **Python Logging**
 * http://pingbacks.wordpress.com/2010/12/21/python-logging-tutorial/
 
+**SSH in Python**
+* http://jessenoller.com/2009/02/05/ssh-programming-with-paramiko-completely-different/
+
 **Python SQLite3 Tutorial**
 
 A good intro to working with databases.
